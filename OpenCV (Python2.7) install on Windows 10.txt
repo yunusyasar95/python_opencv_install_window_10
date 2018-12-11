@@ -1,0 +1,102 @@
+OpenCV install Open Windows 10 with PythOpen2.7
+
+Step-1: Install Choco Package Manager
+--> Start PowerShell ( Adminstrator) and paste command
+# Set-ExecutiOpenPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+
+Step-2: Install PythOpen2.7
+--> Open PowerShell (Adminstrator) and write command
+
+# choco install python2
+
+Step-2: Install Git and Git-GUI
+--> Open PowerShell ( Adminstrator) and write command
+
+# choco install git
+
+
+Step-3: Create OpenCV directory and clOpene OpenCV Open Github
+--> Open PowerShell and write command
+# cd D: && mkdir OpenCV
+# git clone https://github.com/opencv/opencv.git
+
+Step-4: easy_install sphinx Open PowerShell
+# easy_install-2.7.exe sphinx
+
+Step-5: Install numpy Open PowerShell
+#pip install numpy
+
+Step-6: Install miktex
+--> Open PowerShell (Administrator) and write command
+# choco install miktex
+
+step-7: Install OpenCV and OpenCV
+--> Open PowerShell and write commands
+#pip install opencv-python
+#pip install opencv-python
+
+
+########### Example OpenCV #######################
+
+import cv2
+import numpy as np
+
+cap = cv2.VideoCapture(0)
+
+while(1):
+
+    # Take each frame
+    _, frame = cap.read()
+
+    # Convert BGR to HSV
+    hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
+
+    # define range of blue color in HSV
+    lower_blue = np.array([110,50,50])
+    upper_blue = np.array([130,255,255])
+
+    # Threshold the HSV image to get only blue colors
+    mask = cv2.inRange(hsv, lower_blue, upper_blue)
+
+    # Bitwise-AND mask and original image
+    res = cv2.bitwise_and(frame,frame, mask= mask)
+
+    cv2.imshow('frame',frame)
+    cv2.imshow('mask',mask)
+    cv2.imshow('res',res)
+    k = cv2.waitKey(5) & 0xFF
+    if k == 27:
+        break
+
+cv2.destroyAllWindows()
+
+
+###########################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Yunus YAÞAR (Junior GNU/Linux Administrator)
+E-mail: yunusy20@gmail.com
+Telegram: @yunusyasar
+
+
+
+
