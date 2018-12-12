@@ -5,7 +5,7 @@ Step-1: Install Choco Package Manager
 # Set-ExecutiOpenPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 
-Step-2: Install PythOpen2.7
+Step-2: Install Python2.7
 --> Open PowerShell (Adminstrator) and write command
 
 # choco install python2
